@@ -44,3 +44,9 @@ p.border {
     border-style: solid;
     border-width: 1px;
 }
+
+span.span {
+    border-style: dotted;
+    background-color: white;
+    color: red;
+}

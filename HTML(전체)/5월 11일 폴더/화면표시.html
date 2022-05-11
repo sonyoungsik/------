@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        div {
+            display: inline;
+            border: 1px red solid;
+            padding: 10px;
+        }
+
+        span {
+            display: inline;
+            height: 200px;
+        }
+
+        h1 {
+            display: inline-block;
+        }
+
+        div.div1 {
+            background-color: pink;
+            margin: 0;
+            padding: 0;
+            display: inline;
+            position: relative;
+            left: 30px;
+            top: 30px;
+
+        }
+/* 디스플레이로 설정해야 포지션이 이동되고 블록은 막혀있음 */
+        div.div2 {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+
+    <div class="div1">div1</div>
+    <div class="div2">div2</div>
+    <div>div</div>
+    <div>div2</div>
+    <span>span</span>
+    <span>span2</span>
+    <h1>h1</h1>
+    <header>header</header>
+    <footer>footer</footer>
+</body>
+
+</html>

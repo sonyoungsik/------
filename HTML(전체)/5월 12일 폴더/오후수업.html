@@ -14,10 +14,16 @@
         function addTag() {
             document.write('<h1>hello world</h1>');
         }
+        function getTitle() {
+            let title = document.getElementById('title');
+            console.log(title);
+        }
     </script>
 
 
-    <button onclick="addTag()">버튼</button>
+    <button onclick="addTag()">TAG 추가</button>
+    <button onclick="getTitle()">title 얻기</button>
+    <h1 id="title">hello wolrd</h1>
 
 </body>
 

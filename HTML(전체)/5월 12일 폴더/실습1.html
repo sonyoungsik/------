@@ -6,20 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="javascript.js"></script>
 </head>
 
 <body>
-    <script>
-        let name = prompt("이름을 입력해 주세요.")
 
-        if (name == '' || name == null) {
-            name = prompt("다시 한번 입력해 주세요.")
+
+    <script>
+
+        var name = prompt('이름을 입력하세요.');
+
+        if (name == "") {
+            alert('다시 입력하세요.');
+        }
+        name = prompt('이름을 입력하세요.');
+
+        if (name != null) {
+            alert(`${name}님 안녕하세요.`);
+            console.log(name);
         }
 
-        alert(`${name}님 안녕하세요.`);
-    </script>
-</body>
 
+
+
+
+    </script>
+
+
+</body>
 
 </html>

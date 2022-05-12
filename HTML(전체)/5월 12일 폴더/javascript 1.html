@@ -2,37 +2,41 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="my_script.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="my_script.js"></script>
 </head>
 
 <body>
-    <script>
-        // // alert('경고');
-        // function myAlert() {
-        //     alert('정보');
-        // }
-        // alert('경고');
+  <script>
+    // alert('경고');
+    function myAlert() {
+      alert('정보');
+    }
+    alert('경고');
 
-        // 변수 선언
-        var i = 10;
-        var name = "손영식";
+    //  변수 선언
+    var i = 10; // 변수선언 동시에 값을 초기화
+    var name = "손영식";
+
+    // 상수 선언
+    const STUDENT_COUNT = 10;
+    let j = 10; // 지역변수 선언 동시에 값을 초기화
 
 
+    
+  </script>
 
-    </script>
 
+  <input type="button" value="버튼" onclick="javascript:alert('정보')">
+  <!-- 요즘 나오는 태그 -->
+  <button onclick="alert('정보')">버튼</button>
 
-    <input type="button" value="버튼" onclick="javascript:alert('정보')">
-    <!-- 요즘 나오는 태그 -->
-    <button onclick="alert('정보')">버튼</button>
+  <button onclick="myAlert()">버튼</button>
 
-    <button onclick="myAlert()">버튼</button>
-
-    <button ondblclick="myAlertson()">버튼</button>
+  <button ondblclick="myAlertson()">버튼</button>
 
 
 

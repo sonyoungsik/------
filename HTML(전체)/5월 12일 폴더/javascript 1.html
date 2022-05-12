@@ -39,22 +39,20 @@
 
     //콘솔 창 typeof 사용
 
-   // typeof {} -> object (기존 자바랑 약간 다름)
+    // typeof {} -> object (기존 자바랑 약간 다름)
 
+    function alert() {
+      alert('경고');
+    }
+    function confirm() {
+      confirm('다시한번 확인해주세요.');
+    }
 
 
   </script>
 
 
-  <input type="button" value="버튼" onclick="javascript:alert('정보')">
-  <!-- 요즘 나오는 태그 -->
-  <button onclick="alert('정보')">버튼</button>
-
-  <button onclick="myAlert()">버튼</button>
-
-  <button ondblclick="myAlertson()">버튼</button>
-
-
+  <button onclick="alert('경고')">버튼</button>
 
 
 </body>

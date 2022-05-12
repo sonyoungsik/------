@@ -6,43 +6,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        body {
+            width: 100%;
+        }
+
+        .items {
+            width: 100%;
+            position: absolute;
+            top: 40%;
+            text-align: center;
+        }
+
+        #printField {
+            text-align: center;
+            font-size: 50px;
+        }
+
+        #butonField {
+            text-align: center;
+        }
+    </style>
+
 </head>
 
 <body>
+    <div class="items">
+        <span id="printField" align="center"> </span>
+
+        <div class="buttonField" align="center">
+            <button id="red" onclick="turnRed()">빨강</button>
+            <button id="blue" onclick="turnBlue()">파랑</button>
+            <button id="green" onclick="turnGreen()">초록</button>
+        </div>
+    </div>
+
     <script>
+        let input = prompt('텍스트를 입력해주세요');
 
-        let text = prompt('텍스트 값을 입력해주세요.');
-        if (text == "") {
-            alert('텍스트값을 입력해 주세요.');
-        } else if (text != "") {
-            document.write("&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + text.fontsize(100));
+        if (input == null || input == '') {
+            alert('텍스트를 입력해주세요');
+        } else {
+            document.getElementById('printField').innerText = input;
         }
 
-        function red() {
-            alert('빨강색으로 변경됩니다.');
-            let red = document.getElementById('빨강');
-            red.style.color = "#ff0000";
-            alert('색이 변경되었습니다.');
+        function turnRed() {
+            alert('빨간색으로 변경됩니다');
+            document.getElementById('printField').style.color = 'red';
+        }
 
+        function turnBlue() {
+            alert('파란색으로 변경됩니다');
+            document.getElementById('printField').style.color = 'blue';
         }
-        function blue() {
-            alert('파랑색으로 변경됩니다.');
-            let blue = document.getElementById('파랑');
-            blue.style.color = "#3333ff";
-            alert('색이 변경되었습니다.');
-        }
-        function green() {
-            alert('초록색으로 변경됩니다.');
-            let green = document.getElementById('초록');
-            green.style.color = "#339966";
-            alert('색이 변경되었습니다.');
+
+        function turnGreen() {
+            alert('초록색으로 변경됩니다');
+            document.getElementById('printField').style.color = 'green';
         }
 
     </script>
-    <br><br>
-    <button id="빨강" onclick="red()">빨강</button>
-    <button id="파랑" onclick="blue()">파랑</button>
-    <button id="초록" onclick="green()">초록</button>
 </body>
 
 </html>

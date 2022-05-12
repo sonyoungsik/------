@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .button {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 100px;
+            background-color: rgb(80, 80, 80);
+            color: white;
+            font-size: 30px;
+        }
+
+        .click {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 100px;
+            background-color: white;
+            border: 1px solid black;
+            color: black;
+            font-size: 30px;
+        }
+
+        #html {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        #css {
+            position: absolute;
+            top: 10px;
+            left: 320px;
+        }
+
+        #javascript {
+            position: absolute;
+            top: 10px;
+            left: 630px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="button" id="html" onclick="changeHtml()">html</div>
+    <div class="button" id="css" onclick="changeCss()">css</div>
+    <div class="button" id="javascript" onclick="changeJs()">javascript</div>
+
+    <script>
+        function changeHtml() {
+            document.getElementById('html').className = 'click'
+            document.getElementById('css').className = 'button'
+            document.getElementById('javascript').className = 'button'
+        }
+
+        function changeCss() {
+            document.getElementById('css').className = 'click'
+            document.getElementById('html').className = 'button'
+            document.getElementById('javascript').className = 'button'
+        }
+
+        function changeJs() {
+            document.getElementById('javascript').className = 'click'
+            document.getElementById('html').className = 'button'
+            document.getElementById('css').className = 'button'
+        }
+    </script>
+
+</body>
+
+</html>

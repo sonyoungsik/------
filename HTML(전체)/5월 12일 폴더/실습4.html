@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let text = prompt('텍스트 값을 입력해주세요.');
+        if (text == "") {
+            alert('텍스트값을 입력해 주세요.');
+        } else if (text != "") {
+            document.write("&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + text.fontsize(100));
+        }
+
+        function red() {
+            alert('빨강색으로 변경됩니다.');
+            let red = document.getElementById('빨강');
+            red.style.color = "#ff0000";
+            alert('색이 변경되었습니다.');
+
+        }
+        function blue() {
+            alert('파랑색으로 변경됩니다.');
+            let blue = document.getElementById('파랑');
+            blue.style.color = "#3333ff";
+            alert('색이 변경되었습니다.');
+        }
+        function green() {
+            alert('초록색으로 변경됩니다.');
+            let green = document.getElementById('초록');
+            green.style.color = "#339966";
+            alert('색이 변경되었습니다.');
+        }
+
+    </script>
+    <br><br>
+    <button id="빨강" onclick="red()">빨강</button>
+    <button id="파랑" onclick="blue()">파랑</button>
+    <button id="초록" onclick="green()">초록</button>
+</body>
+
+</html>

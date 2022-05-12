@@ -13,16 +13,50 @@
     <script>
         function addTag() {
             document.write('<h1> hello world</h1>');
+
         }
         function addClassTag() {
             document.write('<div class= "test">클래스도?</div>');
         }
 
+        function test() {
+            var a = document.getElementById('test');
+            alert(a.textContent);
+            a.style.color = "#00ff00";
+        }
+
+        function test2() {
+            var b = document.getElementById('test2')
+            b.className = "test";
+        }
+        function test3() {
+            var c = document.getElementsByClassName('class00')
+            c.id = "testtest";
+        }
+
+
     </script>
+
+    <div onclick="test()">test 아이디 내에 내용 꺼내기</div>
+    <h1 id="test">hello</h1>
+
+    <div onclick="test2()">classname 내에 클래스명을 test2에서 test3으로 바꾸기</div>
+    <h2 id="test2">h2h2</h2>
+
+
+
+    <div onclick="test3()">클래스 이름에서 id이름으로 추가함</div>
+    <h3 class="class00">h3h3</h3>
 
     <button onclick="addTag()">Tag 추가</button>
     <div onclick="addTag()">Tag 추가 div 방식으로</div>
     <div onclick="addClassTag()">Tag 추가 div 클래스 방식으로 방식으로</div>
+
+ 
+
+
+
+
 
 
 </body>

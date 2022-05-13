@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="inputText()">
+    <style>
+        .center-big-text {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        div.buttons {
+            text-align: center;
+        }
+    </style>
+    <script>
+        function inputText() {
+            let input = prompt();
+            if (input == '' || text == null) {
+                alert('텍스트값을 입력해주세요.');
+                let text = document.getElementById('text')
+                text.textContent
+
+            }
+        }
+        function changeColor(dom) {
+            let color = dom.name;
+            let text = document.getElementById('text')
+
+        }
+    </script>
+
+    <h1 id="text" class="center-big-text">안녕</h1>
+    <div id="buttons">
+        <button onclick=" changeColor(this)" name="red">빨강</button>
+        <button onclick="changeColor(this)" name="blue">파랑</button>
+        <button onclick="changeColor(this)" name="green">초록</button>
+    </div>
+</body>
+
+</html>

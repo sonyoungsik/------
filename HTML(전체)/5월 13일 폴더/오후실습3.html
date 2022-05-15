@@ -1,0 +1,40 @@
+<html>
+
+<head>
+  <title>오후실습3</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+  <style>
+    div {
+      display: flex;
+      width: 800px;
+      height: 700px;
+      border: 1px black solid;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+  <script>
+    $(function () {
+      $('#div').mouseover(function () {
+        $("img").animate({ left: `-=100px` });
+        $("img").animate({ top: `-=100px` });
+        $("img").animate({ left: `+=100px` });
+        $("img").animate({ top: `+=100px` });
+      })
+    });
+  </script>
+  <div id="div">
+    <img src="https://img6.yna.co.kr/photo/yna/YH/2010/02/01/PYH2010020102450000400_P4.jpg" alt="뿌까" />
+  </div>
+</body>
+
+</html>

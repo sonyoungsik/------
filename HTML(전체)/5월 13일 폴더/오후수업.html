@@ -13,38 +13,38 @@
 
     <script>
         $(function () {
-            // $('#all_check').click(function () {
-            //     $(':checkbox[name=mycheck]').each(function () {
-            //         this.checked = true;
-            //     });
-            // });
+            $('#all_check').click(function () {
+                $(':checkbox[name=mycheck]').each(function () {
+                    this.checked = true;
+                });
+            });
 
-            // $('#check_number_button').click(function () {
-            //     if ($(':checkbox[name=mycheck]').is('checked') == true) {
-            //         $('#result').text('ok');
-            //     } else {
-            //         $('#result').text('no');
-            //     }
-            // });
+            $('#check_number_button').click(function () {
+                if ($(':checkbox[name=mycheck]').is('checked') == true) {
+                    $('#result').text('ok');
+                } else {
+                    $('#result').text('no');
+                }
+            });
 
-            // $('#box').mouseover(function () {
-            //     $(this).animate({
-            //         left: '+=100px'
-            //     }).animate({
-            //         top: '+=100px'
-            //     });
-            // });
+            $('#box').mouseover(function () {
+                $(this).animate({
+                    left: '+=100px'
+                }).animate({
+                    top: '+=100px'
+                });
+            });
 
 
-            // $('#box').click(function () {
-            //     settimeout(function () {
-            //         $(this).animate({
-            //             left: '+=100px'
-            //         }).animate({
-            //             top: '+=100px'
-            //         });
-            //     })
-            // });
+            $('#box').click(function () {
+                settimeout(function () {
+                    $(this).animate({
+                        left: '+=100px'
+                    }).animate({
+                        top: '+=100px'
+                    });
+                })
+            });
 
             $('#all_check_on').click(function () {
                 $(':checkbox[name=mycheck]').prop('checked', true);
@@ -54,13 +54,13 @@
                 $(':checkbox[name=mycheck]').prop('checked', false);
             });
 
-            // $('#checkbox_number').click(function () {
-            //     console.log('number1');
-            // }).mouseover(function () {
-            //     console.log('number2');
-            // }).mouseleave(function () {
-            //     console.log('number3');
-            // });
+            $('#checkbox_number').click(function () {
+                console.log('number1');
+            }).mouseover(function () {
+                console.log('number2');
+            }).mouseleave(function () {
+                console.log('number3');
+            });
 
 
             $('#checkbox_number').click(function () {
@@ -81,7 +81,7 @@
         }
     </style>
 
-    <!-- <form action="">
+    <form action="">
         <input type="checkbox" name="mycheck" id="">
         <input type="checkbox" name="mycheck" id="">
         <input type="checkbox" name="mycheck" id="">
@@ -91,7 +91,7 @@
         <input type="button" id="all_check" value="전체 체크">
         <input type="button" id="check_number_button" value="체크 확인">
         <span id="result"></span>
-    </form> -->
+    </form>
 
     <button id="all_check">전체 체크</button>
 
@@ -107,9 +107,6 @@
         <input type="button" id="checkbox_number2" name="zzz" value="체크박스 갯수">
 
     </form>
-
-
-
 
     <div id="box"></div>
 

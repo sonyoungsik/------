@@ -28,21 +28,25 @@
 
         });
 
-        // $(function () {
-        //     console.log("잘 접속 되었습니다.");
+    </script>
 
-        //     $('#button1').click(function () {
-        //         console.log("버튼1");
-        //     });
+    <script>
 
-        //     document.getElementById('button1').addEventListener('click', function () {
-        //         console.log('addEventListener 클릭');
-        //     });
+        $(function () {
+            console.log("잘 접속 되었습니다.");
 
-        //     $('#button1').on('click', function () {
-        //         console.log('jQuery 버튼 클릭');
-        //     });
-        // });
+            $('#button1').click(function () {
+                console.log("버튼1");
+            });
+
+            document.getElementById('button1').addEventListener('click', function () {
+                console.log('addEventListener 클릭');
+            });
+
+            $('#button1').on('click', function () {
+                console.log('jQuery 버튼 클릭');
+            });
+        });
     </script>
 
     <button id="button1">버튼1</button>

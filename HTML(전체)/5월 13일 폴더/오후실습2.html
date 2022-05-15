@@ -1,0 +1,118 @@
+<html>
+
+<head>
+  <title>오후 실습2</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <style>
+    table {
+      border: 1px black solid;
+      text-align: center;
+    }
+
+    td {
+      border: 1px black solid;
+      padding: 5px;
+    }
+
+    .checkbox_table {
+      width: 80px;
+    }
+
+    .title {
+      width: 200px;
+    }
+
+    .time {
+      width: 100px;
+    }
+
+    #log {
+      position: absolute;
+      width: 120px;
+      height: 50px;
+      margin-top: 20px;
+      left: 300px;
+    }
+  </style>
+
+  <script>
+    $(function () {
+      $('input:checkbox[name=check_all]').click(function () {
+        if (this.checked) {
+          $("input:checkbox[name=check]").prop("checked", true);
+        } else {
+          $("input:checkbox[name=check]").prop("checked", false);
+        }
+      });
+
+      $("input:checkbox[name=check]").click(function () {
+        if (!$("input:checkbox[name=mycheck]").is(":checked")) {
+          $("input:checkbox[name=check_all]").prop("checked", false);
+        }
+      });
+
+      $('#log').click(function () {
+        $('input:checkbox[name=check]').each(function () {
+          if (this.checked) {
+            let idx = $('input:checkbox[name=check]').index(this);
+            console.log(`${$(".title")[idx + 1].textContent}\n`);
+          }
+        });
+      });
+    });
+  </script>
+
+  <form action="">
+    <table>
+      <tr>
+        <td class="checkbox_table">
+          <input type="checkbox" name="check_all" />확인
+        </td>
+        <td class="title">제목</td>
+        <td class="time">글쓴시각</td>
+      </tr>
+      <tr>
+        <td class="checkbox_table">
+          <label><input type="checkbox" name="check" /></label>
+        </td>
+        <td class="title">안녕하세요</td>
+        <td class="time">11:11:00</td>
+      </tr>
+      <tr>
+        <td class="checkbox_table">
+          <label><input type="checkbox" name="check" /></label>
+        </td>
+        <td class="title">어서오세요</td>
+        <td class="time">11:11:00</td>
+      </tr>
+      <tr>
+        <td class="checkbox_table">
+          <label><input type="checkbox" name="check" /></label>
+        </td>
+        <td class="title">지금 시간은</td>
+        <td class="time">11:11:00</td>
+      </tr>
+      <tr>
+        <td class="checkbox_table">
+          <label><input type="checkbox" name="check" /></label>
+        </td>
+        <td class="title">개발 중입니다</td>
+        <td class="time">11:11:00</td>
+      </tr>
+      <tr>
+        <td class="checkbox_table">
+          <label><input type="checkbox" name="check" /></label>
+        </td>
+        <td class="title">감사합니다</td>
+        <td class="time">11:11:00</td>
+      </tr>
+    </table>
+    <input type="button" value="로그" id="log" />
+  </form>
+</body>
+
+</html>

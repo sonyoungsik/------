@@ -11,49 +11,49 @@
 
 <body>
   <script>
-    // onload
-    // $(function () {
-    //   console.log('onload 후에 동작!');
+    onload
+    $(function () {
+      console.log('onload 후에 동작!');
 
-    // // 클릭 이벤트 설정
-    // $('#button1').click(function () {
-    //   console.log('클릭!!!');
-    // });
+      // 클릭 이벤트 설정
+      $('#button1').click(function () {
+        console.log('클릭!!!');
+      });
 
-    // // 기존 javascript 클릭 이벤트 설정
-    // document.getElementById('button2').addEventListener('click', function () {
-    //   console.log('클릭2!!!');
-    // });
+      // 기존 javascript 클릭 이벤트 설정
+      document.getElementById('button2').addEventListener('click', function () {
+        console.log('클릭2!!!');
+      });
 
-    // // 기존 방식과 비슷한 방식
-    // $('#button3').on('click', function () {
-    //   console.log('클릭3!!!');
-    // });
+      // 기존 방식과 비슷한 방식
+      $('#button3').on('click', function () {
+        console.log('클릭3!!!');
+      });
 
-    // // 이벤트 체인
-    // $('#button4').click(function () {
-    //   console.log('클릭4!!!');
-    // }).mouseover(function () {
-    //   console.log('마우스 오버');
-    // }).mouseleave(function () {
-    //   console.log('마우스 떠났어!');
-    // });
+      // 이벤트 체인
+      $('#button4').click(function () {
+        console.log('클릭4!!!');
+      }).mouseover(function () {
+        console.log('마우스 오버');
+      }).mouseleave(function () {
+        console.log('마우스 떠났어!');
+      });
 
-    // $('#button5').click(function () {
-    //   // $('#text').html('<b>html</b>');
-    //   // $('#text').text('<b>html</b>');
-    //   $('#text').append('hello')
-    //     .append(' world')
-    //     .attr('class', 'hello')
-    //     .attr('name', 'world');
+      $('#button5').click(function () {
+        // $('#text').html('<b>html</b>');
+        // $('#text').text('<b>html</b>');
+        $('#text').append('hello')
+          .append(' world')
+          .attr('class', 'hello')
+          .attr('name', 'world');
 
-    //   $('.big-text').attr('name', 'hello');
-    // });
-    // $('#test').click(function () {
-    //   console.log('클릭완료');
-    // });
+        $('.big-text').attr('name', 'hello');
+      });
+      $('#test').click(function () {
+        console.log('클릭완료');
+      });
 
-    // });
+    });
 
   </script>
 
@@ -68,9 +68,9 @@
   <p id="text">글씨 자리</p>
   <button id="button5">클릭5</button><br>
 
-<script>
-  $('console')
-</script>
+  <script>
+    $('console')
+  </script>
 
 
   <button id="test">hello</button>

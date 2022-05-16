@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <style>
+        table,
+        th,
+        td {
+            width: 800px;
+            height: 30px;
+            border: 1px black solid;
+            border-collapse: collapse;
+        }
+
+        #div {
+            text-align: center;
+        }
+    </style>
+
+    <table>
+        <tr>
+            <td style="text-align: center;"><input type="checkbox" name="all" id="all" value="a">확인</td>
+            <td style="text-align: center;">제목</td>
+            <td style="text-align: center;">글쓴시간</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="chc" id="" value="b"></td>
+            <td>안녕하세요.</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="chc" id="" value="c"></td>
+            <td>인사를 부탁드립니다.</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="chc" id="" value="d"></td>
+            <td>오늘은 어떤가요?</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="chc" id="" value="e"></td>
+            <td>날씨가 쾌적하네요.</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="chc" id="" value="f"></td>
+            <td>밥을 먹었나요?</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="chc" id="" value="g"></td>
+            <td>오늘 하루 행복하세요.</td>
+            <td></td>
+        </tr>
+    </table>
+    <input type="button" value="log" id="log_button">
+
+    <script>
+        $(function () {
+            $('#all').click(function () {
+
+                $('input:checkbox[name=chc]').prop('checked', this.checked);
+            });
+
+            $('#log_button').click(function () {
+                if ($(':checkbox[name=chc]').is(':checked') == false) {
+                    alert('선택없음');
+                }
+                $(':checkbox[name=chc]:checked').each(function () {
+                    console.log($(this).val());
+                })
+
+            })
+
+        });
+    </script>
+
+
+</body>
+
+</html>

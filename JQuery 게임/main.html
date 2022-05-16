@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 게임 만들기</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<style>
+    .wrapper {
+        width: 800px;
+        height: 500px;
+        border: 1px black solid;
+        position: relative;
+        margin: auto;
+    }
+
+    .wrapper img {
+        position: absolute;
+        pointer-events: none;
+    }
+
+    #backImg {
+        top: 0;
+        left: 0;
+        width: 800px;
+        height: 500px;
+    }
+
+    #snipeImg {
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+    }
+</style>
+
+<body>
+
+    <div class="wrapper">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8PDw8PDw8VFRUVDxUPFRUPFRUPFRUVFRUWFhUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDQ0NDg0NDisZFRkrKys3Ny0rKysrNysrNysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAMIBAwMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQcC/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDERFAQAAAAAAACigioIqooAioqCoAoCKogCiKACAACACgqKg5FRQAABQQAAAABBQBQgKACCCoIogCgCgAACgAiACgoIICKAAKmCgigKigCGKgKAgAACKAACCoIogqqAgACACgCooIoIAqIKIIAooCKiooCKgAAKIoAACoAqACCoIAAAAKigAAKgAAKAAgqKgAKAIAAAqAAAoigAAAAVKoCAKEFEQABFBQBUVA0AAAAUQBAVAAAFQAAAABBUBVAAEUAAAAAAAAAFBAADAAAARcFEFRAAAAAAAAEAAFQFUAAIAIoACAqoAAoIAqACKAAAAgoCACAAoAIAAAKACCiAqgAAAAAAAoiggCgAAqQQAFUwBEQVAABAAABQAQAAAFFEVFAAAAAAAAAVQRUQFQBagUABQRUQAFQAAAQAAABQAQVAVUUAAAAAVFBFEUUEQAAAAAAQBUAAAAAAAEAAUFRQARFEUUAAVFBFAEAUAAAAAEQQFAAAAABAAUAEBUUUAAAAAAABQAFQAAUQAAAQqRQEhQAUARYAJQAWEAABAAFIAotQEBYAJVACigEAUf/2Q=="
+            id="backImg" />
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUV9-fCLPw8e0hgXV1oyRoEeVJMoHXbZT1YA&usqp=CAU"
+            id="snipeImg">
+    </div>
+
+    <script>
+        $('.wrapper').mousemove(function (e) {
+            var eventX = e.offsetX;
+            var eventY = e.offsetY;
+            eventX -= 50;
+            eventY -= 50;
+            $('#snipeImg').css('left', eventX + "px").css('top', eventY + "px");
+
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <title>뿌까 움직이기</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <style>
+        #container {
+            width: 500px;
+            height: 500px;
+            left: 50px;
+            top: 50px;
+            border: 1px black solid;
+        }
+
+        #mario {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+
+    <div id="container">
+
+        <img id="mario"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUV9-fCLPw8e0hgXV1oyRoEeVJMoHXbZT1YA&usqp=CAU"
+            alt="mario">
+    </div>
+
+    <script>
+        const width = 500;
+        const height = 500;
+
+        let mario = $('#mario');
+        $('body').keydown(function (event) {
+
+            let left = parseInt(mario.css("left").replace("px", ""));
+            let top = parseInt(mario.css("top").replace("px", ""));
+            let right = left + 100;
+            let down = top + 100;
+            let move = 25;
+            console.log(left);
+            switch (event.key) {
+                case "ArrowLeft":
+                    if (left - move >= 0) {
+                        mario.css({ left: '-=25px' })
+                    }
+                    break;
+
+                case "ArrowUp":
+                    if (top - move <= width) {
+                        mario.css({ top: '-=25px' })
+                    }
+                    break;
+
+                case "ArrowRight":
+                    if (right - move >= 0) {
+                        mario.css({ left: '+=25px' })
+                    }
+                    break;
+
+                case "ArrowDown":
+                    if (down - move <= height) {
+                        mario.css({ top: '+=25px' })
+                    }
+                    break;
+            };
+        });
+    </script>
+</body>
+
+</html>

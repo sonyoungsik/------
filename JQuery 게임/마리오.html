@@ -246,7 +246,9 @@
         }
 
         function f() {
+            let isFire = false;
             $("#mi").animate({ left: '700px' }, 500, function () {
+                isFire = true;
                 $("#mi").hide(500, function () {
                     $("#mi").show();
                     $("#mi").css({ left: '100px' }, 500);
@@ -256,7 +258,7 @@
 
         $("body").keypress(function (event) {
             let num = event.key;
-            if (num == 'z') {
+            if (num == 'z' || isFire == false) {
                 f();
             };
         });

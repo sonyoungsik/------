@@ -40,11 +40,16 @@
             overflow: visible;
         }
 
-        hr {
-            width: 33%;
+        div .card {
+            margin: 0 auto;
         }
     </style>
     <script>
+
+        function comeBack() {
+            window.location.href = "실습5.html";
+        }
+
         $(function () {
             const queryString = window.location.search;
             const parameters = new URLSearchParams(queryString);
@@ -55,14 +60,14 @@
                 .then(response => response.json())
                 .then(json => {
                     let comment = $('.comments')
-                    comment.append(`<div class="card">
+                    comment.append(`<div class="card" onclick="comeBack()">
                         <div class="container">
                             <h3 style="text-align: left; font-size: 30px; margin : 10px; color: blue"><b>${json.results[i].title}</b></h3>
                             <img src="https://image.tmdb.org/t/p/w500${json.results[i].poster_path}" style="width: 200px;">
                             <div id="openDay">개봉일 : ${json.results[i].release_date}</div>
                                 <p>${json.results[i].overview}</p>
                         </div>
-                       </div><br><hr align="left"><br>`)
+                       </div>`)
                 })
         });
     </script>

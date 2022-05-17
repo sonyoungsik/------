@@ -2,6 +2,8 @@
 
 https://sonyoungsik.github.io/WebProgramming/AJAX/실습5.html
 
+![image](https://user-images.githubusercontent.com/102119900/168915366-b67f3fed-c34c-4ec0-bff9-e146830331fc.png)
+
 < 주요 기능 >
 
 1. 메인화면에 JSON key-value 값을 추출하여 영화 포스터, 제목을 출력하였습니다.

@@ -23,10 +23,15 @@
                 .then(json => {
                     document.getElementById("demo").innerHTML = JSON.stringify(json);
                     console.log(json);
+                    document.getElementById("result").textContent = json.name;
+                    document.getElementById("result2").textContent = json.skill;
+
                 });
         }
     </script>
     <div id="demo"></div>
+    <div id="result"></div>
+    <div id="result2"></div>
     <button onclick="loadDoc()">get data</button>
 
 

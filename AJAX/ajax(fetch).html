@@ -23,7 +23,7 @@
                 .then(json => {
                     document.getElementById("demo").innerHTML = JSON.stringify(json);
                     console.log(json);
-                    document.getElementById("result").textContent = json.name;
+                    document.getElementById("result").innerHTML = json.name;
                     document.getElementById("result2").textContent = json.skill;
 
                 });

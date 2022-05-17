@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>실습5</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
@@ -16,7 +16,7 @@
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             transition: 0.3s;
             margin: 16px;
-            border-radius: 5px;
+            border-radius: 10px;
         }
 
         div .card {
@@ -32,12 +32,10 @@
             padding: 2px 16px;
             display: block;
             margin: 0px auto;
-
-
         }
 
         hr {
-            width: 300px;
+            width: 330px;
         }
 
         span #name {
@@ -46,34 +44,53 @@
             position: relative;
             left: 80px;
         }
+
+        img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
     </style>
 
     <script>
-        $(function () {
-            loadData();
-        });
-
-        function moveCommentsPage(posterPath) {
-            window.location.href = `실습5-movies.html?i=${posterPath}`;
+        function moveCommentsPage(ArrayIndex) {
+            window.location.href = `실습5-movies.html?ArrayIndex=${ArrayIndex}`;
         };
 
-        function loadData() {
+        $(function () {
+
             fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=a64533e7ece6c72731da47c9c8bc691f&language=ko-KR&page=1')
                 .then(response => response.json())
                 .then(jsonArray => {
-                    for (var i = 0; i < jsonArray.results.length; i++) {
+
+                    for (var ArrayIndex = 0; ArrayIndex < jsonArray.results.length; ArrayIndex++) {
                         let items = $("#items");
-                        items.append(`<div class="card" onclick="moveCommentsPage(${i})">
+                        items.append(`<div class="card" onclick="moveCommentsPage(${ArrayIndex})">
                             <span class="container">
-                                <img src="https://image.tmdb.org/t/p/w500${jsonArray.results[i].poster_path}" style="width: 300px;"><br>
-                                <h3 style="text-align:center; margin : 0 auto;">${jsonArray.results[i].title}</h3>
+                                <img src="https://image.tmdb.org/t/p/w500${jsonArray.results[ArrayIndex].poster_path}" style="width: 300px;"><br>
+                                <h3 style="text-align:center; margin : 0 auto; padding: 3px;">${jsonArray.results[ArrayIndex].title}</h3>
                             </span>
                        </div><br><hr align="center"><br>`);
+
                     }
+
                 });
-        }
+        });
+
+        let currentHeight = 0;
+
+        setInterval(function () {
+            var pageBottom = document.documentElement.scrollHeight;
+
+            if (currentHeight < pageBottom) {
+                document.documentElement.scrollTop += 300;
+            }
+
+        }, 2000);
+
     </script>
+
     <audio src="../assets/bgm.mp3" autoplay></audio>
+
     <div id="items"></div>
 
 

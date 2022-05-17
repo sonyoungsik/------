@@ -9,11 +9,17 @@
 </head>
 
 <body>
-
     <script>
+        // y = f(x) ->  수학식 표현
+        // function f(x) { // 내용 } - > 일반적인 표현(JS)
+        // x => 내용 -> 람다 표현 방식(js 화살표 표기법, lambda(람다 표기법 형태))
+
         function loadDoc() {
             fetch('people.json')
-                .then(response => response.json())
+                .then(response => response.json()) // then : promise 사용 가능
+                // .then(function(response){                          
+                //      return response.json();                  /* 동일한 함수 표현 방식을 람다 방식으로 표기*/
+                //  })
                 .then(json => {
                     document.getElementById("demo").innerHTML = JSON.stringify(json);
                     console.log(json);
@@ -22,6 +28,7 @@
     </script>
     <div id="demo"></div>
     <button onclick="loadDoc()">get data</button>
+
 
 </body>
 

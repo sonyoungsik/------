@@ -1,4 +1,4 @@
-# AJAX 영화 게시판
+# 영화 게시판 (AJAX-JSON 활용)
 
 https://sonyoungsik.github.io/WebProgramming/AJAX/실습5.html
 

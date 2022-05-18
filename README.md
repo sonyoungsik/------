@@ -2,6 +2,9 @@
 
 https://sonyoungsik.github.io/WebProgramming/JQuery_Game/mario.html
 
+https://sonyoungsik.github.io/WebProgramming/AJAX/실습5.html
+
+
 ![image](https://user-images.githubusercontent.com/102119900/168920643-cefac341-1f2e-4796-b976-05038951f81e.png)
 
 < 주요 기능 >

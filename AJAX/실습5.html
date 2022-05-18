@@ -11,6 +11,11 @@
 
 <body>
     <style>
+        #items {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
         .card {
             width: 300px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -66,10 +71,10 @@
                         let items = $("#items");
                         items.append(`<div class="card" onclick="moveCommentsPage(${ArrayIndex})">
                             <span class="container">
-                                <img src="https://image.tmdb.org/t/p/w500${jsonArray.results[ArrayIndex].poster_path}" style="width: 300px;"><br>
+                                <img src="https://image.tmdb.org/t/p/w500${jsonArray.results[ArrayIndex].poster_path}" style="width: 300px;">
                                 <h3 style="text-align:center; margin : 0 auto; padding: 3px;">${jsonArray.results[ArrayIndex].title}</h3>
                             </span>
-                       </div><br><hr align="center"><br>`);
+                       </div>`);
 
                     }
 
